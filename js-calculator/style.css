@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{    
+    min-height: 100vh;
+    background: linear-gradient(45deg, #d3cce3, #e9e4f0);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* display */
+.calculator{
+    background-color: white;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+.calculator-display{
+    background-color: #2e2e23;
+    color: #ffffff;
+    margin: 0px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.calculator-display h2{
+    margin: 0px;
+    padding: 25px;
+    font-size: 45px;
+    font-family: 'Lucida Console',sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+}
+
+
+/* custome scroll bar */
+ ::-webkit-scrollbar {
+    width: 4px;
+    height: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;   
+    border-radius: 50px; 
+
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* buttons */
+  .calculator-buttons{
+      display:grid;
+      grid-template-columns: repeat(4,4fr);
+      grid-gap: 10px;
+      padding: 10px;      
+  }
+  .equal-sign{
+      grid-column: -2;
+      grid-row :2 /span 4;
+  }
+  button{
+      min-height:50px;
+      font-size: 20px;
+      font-weight: 100;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #ccc;
+      transition: all .2s linear;
+  }
+  button:hover{
+      filter:brightness(110%)
+  }
+  button:active{
+    transform: translateY(2px);
+  }
+  button:focus{
+      outline:none;
+  }
+
+  button.operator{
+      background-color: rgb(121, 121, 121);
+      color: #ffffff;
+      font-size: 30px;        
+  }
+  button.operator:hover{
+    filter:brightness(90%)
+}
+
+button.clear{
+    background-color: rgb(206, 42, 42);
+    color:#ffffff;
+
+}
+
+button.equal-sign{
+    background-color: rgb(55, 153, 84);
+    color:#ffffff;
+
+}
+
+
+@media screen and (max-width:600px) {
+    .calculator{
+        width: 95%;
+    }
+}
